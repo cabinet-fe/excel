@@ -1,0 +1,12 @@
+{
+  "extends": "ts-conf-base/tsconfig.web.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "declaration": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": []
+  },
+  "include": ["sample/main.tsx", "src/**/*.ts"]
+}
