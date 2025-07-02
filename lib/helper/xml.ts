@@ -14,7 +14,7 @@ const EncodeDict = new Map<number, string>([
  * @param text - 需要编码的XML字符串
  * @description 主要防止xml注入攻击
  */
-export function xmlEncode(text: string) {
+export function xmlEncode(text: string): string {
   const regexResult = xmlDecodeRE.exec(text)
   if (!regexResult) return text
 

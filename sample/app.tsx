@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web'
-import { XLSX } from '../lib'
+import { Workbook } from 'excel'
 
 function FilePicker() {
   async function handleInput(e: InputEvent) {
@@ -7,7 +7,8 @@ function FilePicker() {
 
     const file = target.files![0]!
 
-    XLSX.load(await file.arrayBuffer())
+    const wb = new Workbook('某个文件')
+    await wb.read(file)
 
     target.value = ''
   }
