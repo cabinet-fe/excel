@@ -1,0 +1,10 @@
+{
+  "extends": "ts-conf-base/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "composite": true,
+    "declaration": true,
+    "isolatedDeclarations": true
+  },
+  "include": ["**/*.ts"]
+}

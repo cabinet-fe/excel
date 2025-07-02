@@ -1,0 +1,12 @@
+{
+  "name": "excel",
+  "module": "./index.ts",
+  "type": "module",
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "fast-xml-parser": "^5.2.5"
+  },
+  "exports": {
+    ".": "./index.ts"
+  }
+}

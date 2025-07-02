@@ -8,5 +8,5 @@
     "jsxImportSource": "solid-js",
     "types": []
   },
-  "include": ["sample/main.tsx", "src/**/*.ts"]
+  "include": ["app.tsx", "**/*.ts"]
 }

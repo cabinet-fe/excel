@@ -1,22 +1,21 @@
 {
   "name": "excel",
-  "module": "src/index.ts",
   "type": "module",
+  "workspaces": [
+    "lib",
+    "sample"
+  ],
   "scripts": {
-    "dev": "bunx --bun vite"
+    "update": "bun update.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
-    "vite": "v6.0.0",
-    "solid-js": "^1.9.4",
-    "vite-plugin-solid": "^2.11.0",
-    "saxes": "^6.0.0",
-    "ts-conf-base": "^2.3.3"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "ts-conf-base": "^2.4.2",
+    "typescript": "^5.8.3",
+    "execa": "^9.6.0"
   },
   "dependencies": {
-    "jszip": "^3.10.1"
+    "lib": "^5.1.0",
+    "sample": "^0.0.2"
   }
 }

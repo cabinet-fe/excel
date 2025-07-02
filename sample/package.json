@@ -1,0 +1,13 @@
+{
+  "name": "excel-sample",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "solid-js": "^1.9.7",
+    "vite-plugin-solid": "^2.11.7",
+    "vite": "npm:rolldown-vite@latest",
+    "excel": "workspace:*"
+  }
+}

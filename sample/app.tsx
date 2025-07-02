@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web'
-import { XLSX } from '../src'
+import { XLSX } from '../lib'
 
 function FilePicker() {
   async function handleInput(e: InputEvent) {
