@@ -9,7 +9,7 @@ export class XLSX {
    * @param data 文件数据
    */
   async read(data: XLSXData): Promise<void> {
-    const zip = await JSZip.loadAsync(data)
+    await JSZip.loadAsync(data)
   }
 
   async write(workbook: Workbook): Promise<void> {}

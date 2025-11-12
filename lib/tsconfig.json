@@ -4,7 +4,16 @@
     "baseUrl": ".",
     "composite": true,
     "declaration": true,
-    "isolatedDeclarations": true
+    "declarationMap": true,
+    "isolatedDeclarations": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "outDir": "./dist",
+    "rootDir": ".",
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "skipDefaultLibCheck": true,
+    "disableSourceOfProjectReferenceRedirect": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts", "**/*.test.ts"]
 }

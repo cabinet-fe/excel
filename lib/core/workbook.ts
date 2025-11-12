@@ -45,3 +45,7 @@ export class Workbook {
     await this.xlsx.write(this)
   }
 }
+
+const wb = new Workbook('test')
+
+wb.write()

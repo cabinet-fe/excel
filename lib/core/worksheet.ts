@@ -1,7 +1,7 @@
 import type { CellVal, SheetCell } from './cell'
 import { SheetRow } from './row'
 import type { Undef } from '../helper/type'
-import { parseAddress } from 'helper/address'
+import { parseAddress } from '../helper/address'
 import { SheetTable, type SheetTableColumn, type SheetTableRow } from './table'
 
 export interface TableOptions {
@@ -31,7 +31,7 @@ export class Worksheet {
   private options?: WorksheetOptions
   private rows: SheetRow[]
   private mergedCells: MergedConfig[] = []
-  private table?: SheetTable
+  private _table?: SheetTable
 
   init(): void {
     const { options } = this
@@ -91,6 +91,13 @@ export class Worksheet {
   }
 
   /**
+   * 获取表格
+   */
+  getTable(): Undef<SheetTable> {
+    return this._table
+  }
+
+  /**
    * 设置表格
    * - 已有的sheet配置会被清空以便于设置表格
    * @param table 表格
@@ -98,7 +105,7 @@ export class Worksheet {
   setTable(table: SheetTable): void {
     this.rows = []
     this.mergedCells = []
-    this.table = table
+    this._table = table
   }
 
   insertRows(index: number, rows: Array<CellVal>[]): void {
@@ -123,18 +130,18 @@ const sheet = new Worksheet('sheet1', {
   rows: [[1, 2, '3']]
 })
 
-const table = new SheetTable(sheet, {
-  columns: [
-    { name: 'a', key: 'a' },
-    { name: 'b', key: 'b' }
-  ],
-  rows: [
-    { a: 1, b: '2' },
-    { a: 2, b: '4' }
-  ]
-})
-
-sheet.setTable(table)
+sheet.setTable(
+  new SheetTable(sheet, {
+    columns: [
+      { name: 'a', key: 'a' },
+      { name: 'b', key: 'b' }
+    ],
+    rows: [
+      { a: 1, b: '2' },
+      { a: 2, b: '4' }
+    ]
+  })
+)
 
 sheet.getRows().forEach(row => {
   row.values.forEach(v => {})

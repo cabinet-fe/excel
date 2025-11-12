@@ -4,7 +4,15 @@
     "baseUrl": ".",
     "composite": true,
     "declaration": true,
-    "types": ["bun"]
+    "declarationMap": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo-node",
+    "outDir": "./dist-node",
+    "types": ["bun"],
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "skipDefaultLibCheck": true,
+    "disableSourceOfProjectReferenceRedirect": true
   },
-  "include": ["./sample/vite.config.ts", "update.ts"]
+  "include": ["./sample/vite.config.ts", "update.ts"],
+  "exclude": ["node_modules", "dist", "dist-node"]
 }

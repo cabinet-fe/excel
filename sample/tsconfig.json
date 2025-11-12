@@ -4,9 +4,24 @@
     "baseUrl": ".",
     "composite": true,
     "declaration": true,
+    "declarationMap": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": []
+    "types": [],
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "outDir": "./dist",
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "skipDefaultLibCheck": true,
+    "disableSourceOfProjectReferenceRedirect": true
   },
-  "include": ["app.tsx", "**/*.ts"]
+  "include": ["app.tsx", "**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

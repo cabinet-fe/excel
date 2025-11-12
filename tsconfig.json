@@ -1,8 +1,13 @@
 {
-  "include": [],
+  "files": [],
   "references": [
     { "path": "./lib/tsconfig.json" },
     { "path": "./sample/tsconfig.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "incremental": true,
+    "tsBuildInfoFile": "./.tsbuildinfo",
+    "assumeChangesOnlyAffectDirectDependencies": true
+  }
 }
